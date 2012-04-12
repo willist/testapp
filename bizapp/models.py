@@ -5,6 +5,13 @@ class Contact(models.Model):
     phone = models.IntegerField()
     email = models.EmailField()
 
+    def __str__(self):
+        return self.name
+
 class Business(models.Model):
     name = models.CharField(max_length=200)
-    contacts = models.ManyToManyField(Contact)
+    contacts = models.ManyToManyField(Contact, related_name='-')
+
+    def __str__(self):
+        return self.name
+
