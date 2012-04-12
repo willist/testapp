@@ -7,8 +7,8 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-     url(r'^$', 'willowbiz.views.home', name='home'),
-    # url(r'^willowbiz/', include('willowbiz.foo.urls')),
+     url(r'^$', 'main.views.home', name='home'),
+    # url(r'^main/', include('willowbiz.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
      url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
