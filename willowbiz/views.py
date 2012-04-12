@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.shortcuts import redirect
 
 def home(request):
-    return HttpResponse("Hello, World!")
+    return redirect('/api/v1/?format=json')
