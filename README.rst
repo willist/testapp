@@ -46,8 +46,8 @@ name__icontains  string  Filter contacts by substring match of name (case
 email            string  Filter contacts by email (exact match required).
 email__icontains string  Filter contacts by substring match of email (case    
                          insensitive).
-phone            integer Filter contacts by phone (exact match required).
-phone__contains  integer Filter contacts by substring match of phone (case 
+phone            string  Filter contacts by phone (exact match required).
+phone__icontains string  Filter contacts by substring match of phone (case 
                          insensitive).
 ================ ======= =================================================
 
