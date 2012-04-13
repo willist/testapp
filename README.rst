@@ -6,7 +6,7 @@ Sample app written for the folks at `WillowTree Apps <http://www.willowtreeapps.
 Description
 ===========
 
-Simple database for storing information about business contacts.:
+Simple database for storing information about business contacts.
 
 - Django application
 - Backed by sqlite3
