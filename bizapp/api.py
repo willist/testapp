@@ -19,6 +19,12 @@ class ContactResource(ModelResource):
     class Meta:
         queryset = Contact.objects.all()
         resource_name = 'contacts'
+        filtering = {
+            "email": ("icontains", "exact", ),
+            "phone": ("icontains", "exact", ),
+            "name": ("icontains", "exact", ),
+        }
+
 
 v1_api = Api(api_name='v1')
 v1_api.register(BusinessResource())

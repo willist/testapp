@@ -15,13 +15,43 @@ Simple database for storing information about business contacts.
 API v1
 ======
 
-======================================= =======================================
-Description                             URL
-======================================= =======================================
-Main                                    /api/v1/
-Businesses                              /api/v1/businesses/
-Specific Business                       /api/v1/businesses/{id}/
-Contacts                                /api/v1/contacts/
-Specific Contact                        /api/v1/contacts/{id}/
-======================================= =======================================
+/api/v1/
+--------
 
+Base API URI. Retrieve information about subresources.
+
+/api/v1/businesses/
+-------------------
+
+Retrieve list of businesses.
+
+/api/v1/businesses/{business_id}/
+---------------------------------
+
+Retrieve a single business.
+
+/api/v1/contacts/
+-----------------
+
+Retrieve a list of contacts.
+
+Methods:
+
+================ ======= =================================================
+Parameter        Value   Description
+================ ======= =================================================
+name             string  Filter contacts by name (exact match required).
+name__icontains  string  Filter contacts by substring match of name (case 
+                         insensitive).
+email            string  Filter contacts by email (exact match required).
+email__icontains string  Filter contacts by substring match of email (case    
+                         insensitive).
+phone            integer Filter contacts by phone (exact match required).
+phone__contains  integer Filter contacts by substring match of phone (case 
+                         insensitive).
+================ ======= =================================================
+
+/api/v1/contacts/{contact_id}/
+------------------------------
+
+Retrieve a single contact.
