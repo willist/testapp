@@ -1,12 +1,13 @@
 About
 =====
 
-Sample app written for the folks at `WillowTree Apps <http://http://www.willowtreeapps.com/>`.
+Sample app written for the folks at `WillowTree Apps <http://http://www.willowtreeapps.com/>`_.
 
 Description
 ===========
 
 Simple database for storing information about business contacts.:
+
 - Django application
 - Backed by sqlite3
 - Using django-tastypie for rest api
