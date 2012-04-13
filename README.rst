@@ -1,7 +1,7 @@
 About
 =====
 
-Sample app written for the folks at `WillowTree Apps <http://http://www.willowtreeapps.com/>`_.
+Sample app written for the folks at `WillowTree Apps <http://www.willowtreeapps.com/>`_.
 
 Description
 ===========
