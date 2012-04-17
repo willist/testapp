@@ -4,16 +4,11 @@ from tastypie.resources import ModelResource
 from bizapp.models import Business, Contact
 
 class BusinessResource(ModelResource):
-    contacts = fields.ToManyField('bizapp.api.ContactResource', 'contacts')
+    contacts = fields.ToManyField('bizapp.api.ContactResource', 'contact_set')
 
     class Meta:
         queryset = Business.objects.all()
         resource_name = 'businesses'
-
-    #def dehydrate(self, bundle):
-        #bundle.data['contacts'] = Business.contacts.throughout
-        #return bundle
-
 
 class ContactResource(ModelResource):
     class Meta:
