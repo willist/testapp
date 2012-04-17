@@ -55,3 +55,13 @@ phone__icontains string  Filter contacts by substring match of phone (case
 ------------------------------
 
 Retrieve a single contact.
+
+/api/v1/projects/
+-----------------
+
+Retrieve a list of projects.
+
+/api/v1/projects/{project_id}
+-----------------------------
+
+Retrieve a single project.
