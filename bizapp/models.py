@@ -18,4 +18,9 @@ class Contact(models.Model):
     def __str__(self):
         return self.name
 
+class Project(models.Model):
+    name = models.CharField(max_length=200)
+    description = models.TextField()
+    business = models.ForeignKey(Business)
+
 
