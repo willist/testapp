@@ -3,14 +3,13 @@ from django import forms
 from django.contrib import admin
 from django.contrib.localflavor.us.forms import USPhoneNumberField
 
-class InlineContactAdmin(admin.StackedInline):
-    model = Business.contacts.through
+class InlineContactAdmin(admin.TabularInline):
+    model = Contact
 
 class BusinessAdmin(admin.ModelAdmin):
     inlines = [
         InlineContactAdmin,
     ]
-    exclude = ('contacts',)
 
 class ContactForm(forms.ModelForm):
     name = forms.CharField()
@@ -20,6 +19,7 @@ class ContactForm(forms.ModelForm):
 
 class ContactAdmin(admin.ModelAdmin):
     form = ContactForm
+    list_display = ('name', 'business', 'phone', 'email')
 
 admin.site.register(Business, BusinessAdmin)
 admin.site.register(Contact, ContactAdmin)
